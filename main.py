@@ -74,7 +74,7 @@ class ExportHandler(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/csv';
         self.response.headers['Content-Disposition'] = str('attachment; filename="export.csv"');
 
-        self.response.write(join(headers) + "\n")
+        self.response.write(join(header) + "\n")
         for row in rows:
             self.response.write(join(row) + "\n")
 
